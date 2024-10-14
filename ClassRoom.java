@@ -35,15 +35,7 @@ public class ClassRoom {
     }
 
     
-    public void printDetails() {
-        System.out.println("Classroom Details:");
-        System.out.println("Room Number: " + roomNumber);
-        System.out.println("Building: " + buildingName);
-        System.out.println("Number of Students: " + numberOfStudents);
-        System.out.println("Projector Available: " + (isProjectorAvailable ? "Yes" : "No"));
-        System.out.println("Air Conditioned: " + (isAirConditioned ? "Yes" : "No"));
-        System.out.println();
-    }
+   
     public static void main(String[] args) {
         
         ClassRoom class1 = new ClassRoom("101", "Science Building", 30, true, true);
@@ -58,27 +50,57 @@ public class ClassRoom {
         ClassRoom class10 = new ClassRoom("202", "Medical Building", 55, false, true);
 
         
-        class1.printDetails();
+       
         class1.openClassroom();
         class1.conductLecture();
         class1.showStudentCount();
         class1.showFacilities();
 
-        class2.printDetails();
         class2.openClassroom();
         class2.conductLecture();
         class2.showStudentCount();
         class2.showFacilities();
 
-        
-        class3.printDetails();
-        class4.printDetails();
-        class5.printDetails();
-        class6.printDetails();
-        class7.printDetails();
-        class8.printDetails();
-        class9.printDetails();
-        class10.printDetails();
+        class3.openClassroom();
+        class3.conductLecture();
+        class3.showStudentCount();
+        class3.showFacilities();
+
+        class4.openClassroom();
+        class4.conductLecture();
+        class4.showStudentCount();
+        class4.showFacilities();
+
+        class5.openClassroom();
+        class5.conductLecture();
+        class5.showStudentCount();
+        class5.showFacilities();
+
+        class6.openClassroom();
+        class6.conductLecture();
+        class6.showStudentCount();
+        class6.showFacilities();
+
+        class7.openClassroom();
+        class7.conductLecture();
+        class7.showStudentCount();
+        class7.showFacilities();
+
+        class8.openClassroom();
+        class8.conductLecture();
+        class8.showStudentCount();
+        class8.showFacilities();
+
+        class9.openClassroom();
+        class9.conductLecture();
+        class9.showStudentCount();
+        class9.showFacilities();
+
+        class10.openClassroom();
+        class10.conductLecture();
+        class10.showStudentCount();
+        class10.showFacilities();
+
     }
 }
 
