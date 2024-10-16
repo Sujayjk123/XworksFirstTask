@@ -54,7 +54,7 @@ public class House {
         for(int i=0;i<=arrayOfHouse.length;i++){
             if (arrayOfHouse[i] == null) {
                 arrayOfHouse[i] = house;
-                System.out.println("house" + i+1 + "  saved");
+                System.out.println("house saved");
                 return true;
             }
         }
