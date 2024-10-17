@@ -47,11 +47,18 @@ public class House {
         System.out.println("--------------------------->>");
         System.out.println("Finding based on address and number of rooms");
         System.out.println("--------------------------->>");
-        House.findHouse("123 Maple St, Springfield");
+        House foundHouse =  House.findHouse("123 Maple St, Springfield");
+        foundHouse.displayDetails();
         System.out.println("--------------------------->>");
-        House.findHouse(3);
+        House foundHouse1 = House.findHouse(3);
+        foundHouse1.displayDetails();
+     
+
+
         System.out.println();
         System.out.println();
+
+
         System.out.println("--------------------------->>");
         System.out.println("Updating a rooms and floors of a house and based on address");
         System.out.println("--------------------------->>");
@@ -60,6 +67,8 @@ public class House {
         House.updatingHouseDetailsFloors("123 Maple St, Springfield", 13);
         
     }
+
+
     public static boolean saveHouse(House house){
         for(int i=0;i<=arrayOfHouse.length;i++){
             if (arrayOfHouse[i] == null) {
@@ -69,38 +78,37 @@ public class House {
             }
         }
         System.out.println("house cannot be saved");
-        return false;
-        
+        return false;  
     }
 
 
-    public static void findHouse(String hAddress){
+    public static House findHouse(String hAddress){
 
         for(int i=0;i<arrayOfHouse.length;i++){
             if (arrayOfHouse[i] != null) {
                 if ((arrayOfHouse[i].address.equals(hAddress))) {
-                    arrayOfHouse[i].displayDetails();
-                    return;
+                    return arrayOfHouse[i];
                 }
             }
         }
         System.out.println("Address not found!!");
-        return;  
+        return null;  
     }
 
-    public static void findHouse(int hnumberOfRooms){
+
+    public static House findHouse(int hnumberOfRooms){
 
         for(int i=0;i<arrayOfHouse.length;i++){
             if (arrayOfHouse[i] != null) {
-                if ((arrayOfHouse[i].numberOfRooms == hnumberOfRooms)) {
-                    arrayOfHouse[i].displayDetails();
-                    return;
+                if ((arrayOfHouse[i].numberOfRooms == hnumberOfRooms)) {    
+                    return arrayOfHouse[i];
                 }
             }
         }
         System.out.println("Those Number of rooms not found in any address not found!!");
-        return;  
+        return null;  
     }
+
 
     public static void updatingHouseDetailsRooms(String hAddress,int updatedNumberofRooms){
         for(int i=0;i<arrayOfHouse.length;i++){
@@ -120,6 +128,8 @@ public class House {
         return;
     }
 
+
+
     public static void updatingHouseDetailsFloors(String hAddress,int updatedNumberofFloors){
         for(int i=0;i<arrayOfHouse.length;i++){
             if (arrayOfHouse[i]!=null) {
@@ -137,6 +147,4 @@ public class House {
         System.out.println("not found the address cannot update!!");
         return;
     }
-
-
 }
